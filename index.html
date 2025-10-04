@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <title>Document</title>
+</head>
+<style>
+    body{
+        width: 100%;
+        height: auto;
+        background:linear-gradient(to right, rgb(19, 1, 16)0%,#230930 50%, #3f0731 100%);
+    } 
+    .footer{
+       background:linear-gradient(to right, #0f2027 0%,#0f2027 50%, #0f2027 100%);
+    }
+    .footer .me{
+          color: #00c3ff;
+    }
+    .footer .me-2{
+          color: #00c3ff;
+    }
+    .header{
+        height: 70px ;
+      background-color: rgb(27, 13, 88);
+      position: fixed;
+        }
+        .box{
+            height: 70px;
+            width: 500px;
+            color: aliceblue;
+            margin-left: 10px;
+            padding-left: 100px;
+        }
+         .icon{
+        margin-top: 20px;
+        color: #eb18b6;
+       }
+           .box2 {
+            height: 70px;
+            width: 500px;
+            color: rgb(245, 247, 248);
+            margin-left: 10px;
+        }
+        .box2 li{
+             display:inline-block;
+             margin: 20px;
+             margin-top: 30px;
+        }
+        .li:hover{
+            color: #741733; 
+            font-size: 20px;
+        }
+           .box3{
+            height: 70px;
+            width: 500px;
+            color: aliceblue;
+            margin-left: 10px;  
+        }
+        .button{
+            padding: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: rgb(147, 19, 233);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius:30px ;
+            border: none;
+            color: aliceblue;
+            margin-left: 70px;
+            margin-top: 10px;
+        }
+      .button:hover{
+        background-color: slateblue;
+        color: aliceblue;
+        border: 2px solid gray;
+      }
+      .main1{
+        height: auto;
+        display: flex;
+
+      }
+      .boxh{
+        width: 50%;
+        height: 500px;
+        color: aliceblue;
+        align-items: end;
+        margin-top: 140px;
+      }
+       span {
+      opacity: 0;
+      display: inline-block;
+      margin-left: 13px;
+      animation: appear 1s forwards;
+    }
+
+    span:nth-child(1) { animation-delay: 0s; color: #00c3ff; }
+    span:nth-child(2) { animation-delay: 1s; color: #ff9800; }
+    span:nth-child(3) { animation-delay: 2s; color: #4caf50; }
+    span:nth-child(4) { animation-delay: 3s; color: #e91e63; }
+    span:nth-child(5) { animation-delay: 3s; color: #1e5ee9; }
+    span:nth-child(6) { animation-delay: 3s; color: #e91e1e; }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+        .bold {
+      font-size: 25px;
+      font-weight: bold;
+        }
+          .line {
+      border-right: 3px solid #00c3ff; /* cursor */
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      margin: 5px 0;
+    }
+
+    .line1 {
+      animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+    }
+
+    .line2 {
+      animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+      animation-delay: 3.2s; /* pehle line ke baad start */
+    }
+
+    .line3 {
+      animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+      animation-delay: 6.4s; /* dusre ke baad start */
+    }
+.line4 {
+      animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+      animation-delay: 9.4s; /* dusre ke baad start */
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+      .boxim{
+        width: 50%;
+        height: 500px;
+display: flex;
+align-items: center;
+justify-content: center;
+ margin-top: 170px;
+      }
+      .img{
+        border-radius: 20px;        
+      }
+     .img:hover{
+  transform: translateY(10px);
+            transition: 0.3s;
+     }
+     .con{
+     background-color: #3f0731;
+     color:white;
+     padding: 10px;
+     font-size: 20px;
+     border: none;
+     border-radius: 10px;     
+     margin-top: 10px;
+     }
+     .con:hover{
+       background-color: #7e1062;
+       transform: translateY(10px);
+         border: 1px solid white;
+     }
+     .skill{
+ background-color: #3f0731;
+     color:white;
+     padding: 10px;
+     font-size: 20px;
+     border: none;
+     border-radius: 10px;
+   margin-left: 20px;
+     }
+     .skill:hover{
+        margin: none;
+        background-color: #eb18b6;
+   transform: translate(10px);
+   border: 1px solid white;
+     }
+    .main2{
+        height: auto;    
+    }
+    .subimg{
+        height: auto;
+        margin-top: 150px;
+    }
+    .subheadi{
+        height: auto;     
+        color: aliceblue;
+         margin-top: 150px;
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .para{
+        color: rgb(167, 168, 168);
+    }
+    .boxi{
+        color: #b6519d;
+        font-size: 20px;
+    }
+    .boxi:hover{
+       color: #fd1837;
+       transform: scale(1.2);
+    }
+    .butto{
+        padding: 10px;
+        background-color: #3f0731;
+        border: none;
+        border-radius: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        color: aliceblue;
+    }
+    .butto:hover{
+        background-color: #61084b;
+        transform: translateY(5px);
+    }
+    .main3{
+        height: auto;       
+        color: aliceblue;
+    }
+    .aboutimg{
+      width: 500px;
+      height: auto;
+      border-radius: 20px;
+    }
+    .font{
+        margin-top: 100px;
+        font-size: 60px;
+         text-align: center;
+    }
+    .box5{
+        margin-top: 20px;
+        width: 390px;
+        max-width: 100%;
+        height: 250px;
+    margin-left:50px ;
+        border: 1px solid rgb(0, 81, 255);
+        border-radius: 10px;
+        background-color: #230930;
+        color: aliceblue;
+        text-align: center;
+        animation-name: scale;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+    @keyframes scale{
+      0%{transform: scale(1);}
+       0%{transform: scale(1.01);}
+        0%{transform: scale(1);}
+    }
+    .ico{
+        font-size: 40px; 
+      margin-top: 40px;
+      margin-bottom: 40px;
+      color: #851a6a;
+    }
+    .main4{
+        height: auto;
+    }
+    .box6{
+        height: auto;
+    }
+    .boxskil{
+        height: auto;
+         border: 1px solid rgb(255, 0, 242);
+        padding: 30px;
+        border-radius: 10px;
+         margin-left: 15px;
+         text-align: center;
+         color: whitesmoke;
+         background-color: rgb(19, 1, 16);
+  animation-name: float;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+    }
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); } /* upar 10px move */
+  100% { transform: translateY(0); }    /* wapas normal */
+}
+
+/* Optional: Slight delay for each box to stagger */
+.boxskil:nth-child(1) { animation-delay: 0s; }
+.boxskil:nth-child(2) { animation-delay: 0.2s; }
+.boxskil:nth-child(3) { animation-delay: 0.4s; }
+.boxskil:nth-child(4) { animation-delay: 0.6s; }
+.boxskil:nth-child(5) { animation-delay: 0.8s; }
+.boxskil:nth-child(6) { animation-delay: 1s; }
+.boxskil:nth-child(7) { animation-delay: 1.2s; }
+.boxskil:nth-child(8) { animation-delay: 1.4s; }
+.boxskil:nth-child(9) { animation-delay: 1.6s; }
+.boxskil:nth-child(10){ animation-delay: 1.8s; }
+.boxskil1{
+     height: 100px;
+         width: 200px;
+         margin-left: 15px;
+         text-align: center;
+         color: aliceblue;
+}
+.tech{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 40px;
+    margin-top: 100px;
+}
+.is{
+    font-size: 40px;
+    margin-left:0px;
+    margin-top: 20px;
+    color: rgb(212, 83, 31);
+}
+.main5{
+    height: auto;
+}
+.demo-main{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-bottom: 60px;
+  margin-top: 50px;
+  justify-content: space-evenly;
+}
+.daimo{
+  padding: 10px;
+  margin-top: 20px;
+  padding-left: 50px;
+  padding-right:50px;
+  background-color: #ce79b9;
+  border-radius:10px;
+  border: none;
+}
+.daimo:hover{
+  background-color: #741733;
+  border: 1px solid white;
+}
+.damo1 img{
+ width: 400px;
+ margin: 60px 0;
+  height: auto;
+  animation-name: scale ;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes scale{
+  0%{ transform: scale(1);}
+  50%{ transform: scale(1.1);}
+  100%{ transform: scale(1);}
+}
+.col-6{
+    height: 500px;
+    color: aliceblue;
+}
+.imbox img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.work{
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.imbox:hover img{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.tal{
+    width: 300px;
+    height: 100px;
+}
+.talk{
+    padding: 10px;
+    background-color: #61084b;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: whitesmoke;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.man{
+    height: 40px ;    
+}
+.par{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+.per{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+.click{
+    color: #b6519d;
+}
+.click:hover{
+    color: #b66e51;
+    transform: scale(1.5);
+    transform: translate(2px);
+}
+.man1:hover{
+    transform: translate(2px);
+    .click{
+        color: #b66e51;
+    }
+}
+.main6{
+    height:auto;  
+}
+.input0{
+    width: 900px;
+    height: 500px;   
+margin-left: 200px;
+color: rgb(104, 110, 116);
+text-align: center;
+margin-top: 50px;
+}
+.input1{
+background-color: #61084b;
+border: none;
+border-radius: 10px;
+height: 60px;
+width: 440px;
+}
+.input2{
+background-color: #61084b;
+border: none;
+border-radius: 10px;
+height: 60px;
+width: 440px;
+margin-left: 10px;
+}
+.input3{
+background-color: #61084b;
+border: none;
+border-radius: 10px;
+height: 60px;
+width: 100%;
+margin-top: 20px;
+}
+.input4{
+background-color: #61084b;
+border: none;
+border-radius: 10px;
+height: 200px;
+width: 100%;
+margin-top: 20px;
+}
+.contacttext{
+    height: 200px;
+    display: inline-block;
+    text-align: center;
+  width: 700px;
+  margin-left: 30%;
+}
+.sendmassege{
+    background-color: #7e1062;
+    color: white;
+     border: none;
+     border-radius: 30px;
+     padding: 10px;
+     padding-left: 40px;
+     padding-right: 40px;
+     margin-top:20px ;
+}
+.sendmassege:hover{
+    background:linear-gradient(to right,rgb(116, 5, 82)50%,rgb(209, 200, 200)200%);
+    transform: scale(1.1);
+}
+.me{
+ text-decoration: none;
+ color: #686a6b;
+}
+.me:hover{
+    color: whitesmoke;
+    margin-left: 8px;
+    transition: 1s;
+}
+.btn:hover{
+    background-color: rgb(8, 73, 64);
+    transform: scale(1.1);
+transition: 1s;
+}
+.btn1{
+color: rgb(237, 245, 241);
+background-color: springgreen;
+border-radius: 55%;
+padding: 8px;
+font-size: 15px;
+}
+.btn1:hover{
+background-color: rgb(8, 73, 64);
+color: whitesmoke;
+transform: scale(1.1);
+transition: 1s;
+}
+.btn2{
+    color: whitesmoke;
+    border: 1px solid grey;
+    background:  rgba(255, 255, 255, 0.1);
+    border-radius: 55%;
+padding: 8px;
+font-size: 15px;
+}
+.btn2:hover{
+    background-color: #851a6a;
+    color: whitesmoke;
+    margin-bottom: 10px;
+transform: scale(1.1);
+transition: 1s;
+border: none;
+}
+.color{
+    color: rgb(120, 17, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 40px;
+}
+.paragraps{
+  color: whitesmoke;
+}
+/* ------------------------------
+   Responsive tweaks only (mobile/tablet)
+   I have NOT changed your content — only added overrides so layout fits small screens
+   ------------------------------ */
+@media (max-width: 991.98px) {
+  body{ height: auto; }
+  /* allow main hero to wrap on smaller screens */
+  .main1 { flex-wrap: wrap; padding-top: 20px; }
+  .boxh, .boxim { width: 100%; height: auto; margin-top: 20px; }
+  .boxh { margin-top: 40px; }
+  /* scale down big headings */
+  .bold { font-size: 36px; line-height: 1.05; }
+  /* make hero image responsive */
+  .boxim .img, .subimg img {
+    max-width: 100%;
+    width: 320px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  /* buttons & callouts align nicely */
+  .con, .skill, .button { margin-left: 0 !important; display: inline-block; margin-top: 10px; }
+  .button { margin-left: 0; }
+  /* stats row stacking adjustments */
+  .main1 .row .sub { text-align: left; margin-top: 20px; }
+  /* cards & services full width */
+  .box5 { width: 100% !important; margin-left: 0 !important; margin-bottom: 15px; }
+  /* skills grid should wrap */
+  .box6 .row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .box6 .col-2 { flex: 0 0 48%; max-width: 48%; margin-left:0; }
+  /* reduce large fonts */
+  .font { font-size: 36px; margin-top: 30px; }
+  .par { font-size: 32px; }
+  /* contact form responsiveness */
+  .input0 { width: 100% !important; margin-left: 0 !important; height: auto; padding: 0 10px; }
+  .input1, .input2 { width: 100% !important; margin-left: 0 !important; margin-bottom: 10px; }
+  .input3 { width: 100% !important; }
+  .input4 { width: 100% !important; height: 160px; }
+  .contacttext { width: 100% !important; margin-left: 0 !important; text-align: center; }
+  .main3, .main4, .main5 { height: auto; }
+  /* make hero image container centered */
+  .boxim { display: flex; justify-content: center; align-items: center; }
+  /* smaller icons/text */
+  .boxi { font-size: 18px; }
+  /* make navbar brand smaller on smaller screens */
+  .navbar-brand { font-size: 1rem; }
+  /* ensure WhatsApp/follow icons align */
+  .d-flex.gap-3 { flex-wrap: wrap; gap: 8px; }
+}
+/* extra small screens */
+@media (max-width: 575.98px) {
+  .bold { font-size: 28px; }
+  .par { font-size: 26px; }
+  .font { font-size: 28px; }
+  /* .boxskil, .boxskil1 { width: 100% !important; margin-left: 0 !important; } */
+  .box5 { height: auto; padding: 15px; }
+  .img { max-width: 100%; height: auto; }
+  .input4 { height: 140px; }
+  .button { padding-left: 20px; padding-right: 20px; font-size: 16px; }
+  .sendmassege { padding-left: 20px; padding-right: 20px; }
+  .tech { font-size: 24px; margin-top: 30px; }
+}
+/* make toggler icon visible even without navbar-dark / navbar-light classes */
+.navbar-toggler-icon{
+  /* three-bar style using background gradients */
+  width: 30px;
+  height: 22px;
+  background-image:
+    linear-gradient(#fff 0 0),
+    linear-gradient(#fff 0 0),
+    linear-gradient(#fff 0 0);
+  background-size: 20px 2px;
+  background-position: center 3px, center 10px, center 17px;
+  background-repeat: no-repeat;
+} 
+.main-1{
+  justify-content: space-between;
+}
+.main-1 .col-4{
+  max-width: 95%;
+}
+</style>
+<body>
+    <section>
+<nav class="navbar navbar-expand-lg " style=" background:linear-gradient(to right, rgb(83, 18, 73)0%,#3b0f52 50%, #2b0722 100%);">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white " href="#"><img src="Elegant SA Monogram Design.png" alt="" width="150px" height="80px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active color" aria-current="page" href="#main1">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link active color" aria-current="page" href="#about">About Me</a>
+        </li>
+        </li>
+          <a class="nav-link active color" aria-current="page" href="#Services">My Services</a>
+          <li>
+          <a class="nav-link active color" aria-current="page" href="#skill">My Skills</a>
+          <li>
+          <a class="nav-link active color" aria-current="page" href="#product">My Projucts</a>
+         </li>
+         <li>
+          <a class="nav-link active color" aria-current="page" href="#contact">Contact Us</a>
+         </li>
+        </ul>
+       <a href="#Services"><button class="button">More Information</button></a>   
+    </div>
+  </div>
+</nav>
+<section>
+  
+<div id="main1" class="main1 container">
+    <div class=" boxh col-sm-12">
+<p class="p"> <h1>
+    <span> Hello!</span><span> My name is </span><span> Sheraz Ali,</span> 
+    <span>and I am a </span> <span>creative and skilled</span>
+     <span> Web Developer.</span>
+  </h1>
+<h4 class="bold">  <div class="line line1">I design and build <br> responsive,</div>
+  <div class="line line2"> user-friendly websites <br> and web applications</div>
+    <div class="line line line3"> that drive results <br> and delight users.</div>
+      <div class="line line4"> Let's bring your digital <br> vision to life!</div></h4></p>
+    <a href="#contact"> <button class="con"> Let's Contect  <i class="fa-solid fa-phone"></i></button></a>
+  <a href="#skill">  <button class="skill">My Skills <i class="fa-solid fa-shield-halved"></i></button></a>
+    <div class="row">
+        <div class="col-12"></div>
+        <div class="sub ms-0 col-3 mt-5"><h1>5+</h1>
+Years Experience</div>
+<div class="col-1"></div>
+        <div class="sub ms-0 col-3 mt-5"><h1>100+</h1>
+      
+Projects Done</div>
+<div class="col-1"></div>
+        <div class="sub ms-0 col-3 mt-5"><h1>99%</h1>
+Client Satisfaction</div>
+    </div>
+    </div>
+    <div class="boxim col-12 col-sm-12 ">
+        <img class="img" src="WhatsApp Image 2025-07-27 at 07.42.13_07e2f3a0.jpg" alt="" width="500px" height="auto">
+    </div>
+</div>
+</section>
+<section>
+<div class="container main2">
+    <div class="row ">
+    <div class="subimg col-sm-12 col-lg-6 col-xl-6   ">
+<img class="aboutimg" src="WhatsApp Image 2025-07-27 at 07.42.13_07e2f3a0.jpg" alt="">
+    </div>
+
+
+<!-- About Me Section -->
+<div id="about" class="subheadi col-lg-6 col-md-12 col-sm-12">
+  <h1 class="about"><strong>About Me</strong></h1>
+  <br>
+  <strong>
+    <p class="para">
+      Hello! I'm Sheraz Ali, a passionate and results-oriented Web Developer with a knack for creating dynamic and intuitive digital experiences. With a strong foundation in modern web technologies, I thrive on transforming complex problems into elegant, efficient solutions. My experience spans various domains, including developing solutions for fitness management, educational and travel platforms, and emerging blockchain technologies.
+      <br><br>
+      My journey in web development started with a fascination for how websites work, and it has grown into a full-fledged passion for building tools that help people and businesses achieve their goals. I'm a lifelong learner, always eager to explore new technologies and methodologies.
+    </p>
+  </strong>
+
+  <div class="click">
+    <div class="row">
+      <div class="col-1 sub1"><i class="fa-solid boxi fa-circle-check"></i></div>
+      <div class="col-11 sub1">Versatile Across Diverse Project Domains</div>
+    </div>
+  </div>
+
+  <div class="click">
+    <div class="row">
+      <div class="col-1 sub1"><i class="fa-solid boxi fa-circle-check"></i></div>
+      <div class="col-11 sub1">Committed to Clean & Efficient Code</div>
+    </div>
+  </div>
+
+  <div class="click">
+    <div class="row">
+      <div class="col-1 sub1"><i class="fa-solid boxi fa-circle-check"></i></div>
+      <div class="col-11 sub1">Focus on User Experience & Accessibility</div>
+    </div>
+  </div>
+
+  <a href="button.html">
+    <button class="butto">Download CV <i class="fa-solid fa-download"></i></button>
+  </a>
+</div>
+
+</div>
+</div>
+</section>
+<section>
+<div id="Services" class="container main3">
+   <h1 class="font">My Services</h1>
+    <div class="row main-1">
+        <div class="col-4 box5 "><i class="fa-solid ico fa-code"></i><h3>Frontend Development</h3>
+<strong>Crafting responsive and engaging user interfaces with modern technologies.</strong></div>
+      
+        <div class="col-4 box5"><i class="fa-solid ico fa-database"></i></i><h3>Backend Development</h3>
+<strong>Building robust and scalable server-side logic and APIs.</strong></div>
+          
+          <div class="col-4 box5"><i class="fa-solid ico fa-layer-group"></i><h3>Full-Stack Solutions</h3>
+<strong>End-to-end web application development, from concept to deployment.</strong></div>
+    </div>
+</div>
+</section>
+<section>
+<div class="container main4 col-12">
+    <h1 id="skill" class="tech">Technical Skills</h1>
+    <div class="box6">
+<div class="row">
+    <div class="col-lg-2 col-md-3 col-4 mb-3 boxskil"><i class="fa-brands is fa-html5"></i><br>
+        HTML5</div>
+      <div class="col-lg-2 col-md-3 col-4  mb-3  boxskil" ><i class="fa-brands is fa-css3-alt"></i><br>
+        CSS3</div>
+        <div class="col-lg-2 col-md-3 col-4  mb-3 boxskil"><i class="fa-brands is fa-js"></i><br>
+            JavaScript</div>
+          <div class="col-lg-2 col-md-3 col-4 mb-3 boxskil"><i class="fa-brands is fa-react"></i><br>
+            React</div>
+            <div class="col-lg-2 col-md-3 col-4  mb-3 boxskil"><i class="fa-brands is fa-node-js"></i><br>
+                Node.js</div>
+              <div class="col-lg-2 col-md-3 col-4 mb-3 boxskil"><i class="fa-brands is fa-python"></i><br>
+                Python</div>
+
+      <div class="col-lg-2 col-md-3 col-4 mb-3  boxskil"><i class="fa-solid is fa-database"></i><br>
+        SQL/NoSQL</div>
+        <div class="col-lg-2 col-md-3 col-4 mb-3 boxskil"><i class="fa-brands is fa-git-alt"></i><br>
+            Git & GitHub</div>
+          <div class="col-lg-2 col-md-3 col-4 mb-3 boxskil"><i class="fa-brands is fa-bootstrap"></i><br>
+            Bootstrap</div>
+            <div class="col-lg-2 col-md-3 col-4 mb-3 boxskil"><i class="fa-brands is fa-ethereum"></i><br>
+                Solidity</div>
+</div>    
+    </div>
+</div>
+</section>
+<section id="product">
+  <h1 style="text-align: center; color: whitesmoke; margin-top: 20px;">My Projucts</h1>
+  <div class="container">
+    <div class="row">
+      <div class="damo1 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <img src="public/image.png" alt="" style="height: 400px; width: 100%; max-width: 350px;">
+        <a href="public/index.html"><button class="daimo" type="button">Daimo</button></a>
+      </div>
+      <div class="damo1 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <img src="Screenshot 2025-10-03 205803.png" alt="" style="height: 400px; width: 100%; max-width: 350px;">
+        <a href="day5/index.html"><button class="daimo" type="button">Daimo</button></a>
+      </div>
+      <div class="damo1 col-lg-4 col-md-6 col-sm-12  mb-4">
+        <img src="Screenshot 2025-08-22 225215.png" alt="" style="height: 400px; width: 100%; max-width: 350px;">
+     <a href="faheem/faheem.html"> <button class="daimo" type="button">Daimo</button></a>
+      </div>
+    </div>
+  </div>
+   <div class="container">
+    <div class="row">
+      <div class="damo1 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <img src="Screenshot 2025-08-24 214510.png" alt="" style="height: 400px; width: 100%; max-width: 350px;">
+        <a href="chatgpt.html"><button class="daimo" type="button">Daimo</button></a>
+      </div>
+      <div class="damo1 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <img src="Screenshot 2025-10-03 205835.png" alt="" style="height: 400px; width: 100%; max-width: 350px;">
+        <a href="day4/index.html"><button class="daimo" type="button">Daimo</button></a>
+      </div>
+      <div class="damo1 col-lg-4 col-md-6 col-sm-12  mb-4">
+        <img src="Screenshot 2025-10-03 205921.png" alt="" style="height: 400px; width: 100%; max-width: 350px;">
+     <a href="day3/index.html"> <button class="daimo" type="button"> Daimo</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+<div class="main5 container">
+    <div class="row">
+        <div class="imbox col-sm-12 col-lg-6 col-xl-6">
+            <img class="work" src="work (1).avif" alt="">
+            <div class="tal"> 
+            <a href="#contact">  
+            <button class="talk">Let's Talk <i class="fa-solid fa-comments"></i></button></a>
+          </div>
+        </div>
+
+
+
+
+ <div class="paragraps col-lg-6 col-md-8 col-sm-12">
+  <h1 class="par">Partnering for Your <br> Success</h1>
+  <p class="per">
+    Choosing the right developer is crucial. I'm dedicated to understanding 
+    your unique needs and delivering solutions that not only meet but exceed 
+    your expectations. My focus is on creating value through quality, 
+    innovation, and collaboration.
+  </p>
+
+  <div class="man1">
+    <div class="row align-items-center">
+      <div class="col-1 man"><i class="fa-solid click fa-check"></i></div>
+      <div class="col-11 man">Transparent Communication</div>
+    </div>
+  </div>
+
+  <div class="man1">
+    <div class="row align-items-center">
+      <div class="col-1 man"><i class="fa-solid click fa-check"></i></div>
+      <div class="col-11 man">Quality-Driven Development</div>
+    </div>
+  </div>
+
+  <div class="man1">
+    <div class="row align-items-center">
+      <div class="col-1 man"><i class="fa-solid click fa-check"></i></div>
+      <div class="col-11 man">Timely Delivery & Support</div>
+    </div>
+  </div>
+
+  <div class="man1">
+    <div class="row align-items-center">
+      <div class="col-1 man"><i class="fa-solid click fa-check"></i></div>
+      <div class="col-11 man">Scalable & Future-Proof Solutions</div>
+    </div>
+  </div>
+</div>
+         </div>
+    </div>
+</div>
+</section>
+<section>
+    <form action="#" method="POST" class="contact-form"> 
+                    
+<div id="contact" class="main6 container">
+    <div class="input0">
+      <textarea class="input1" placeholder="Your Name" required></textarea>
+        <textarea class="input2" placeholder="Your Email" required></textarea>
+          <textarea class="input3" placeholder=" Subject" required></textarea>
+   <textarea class="input4" placeholder="Your Massage" required></textarea>
+   <button class="sendmassege btn-gradient rounded-pill px-5 py-3"> Send Massege</button><br>
+   <br>
+   </form>
+   <br>
+   </div>
+</div>
+   <div class="container contacttext ">
+  <h5> or contact with me on:</h5><br>
+  <h4><a href="mailto:raisheraz7181@gmail.com "><i class="fa-solid fa-envelope"></i>raisheraz7181@gmail.com  </a>
+      <a href="https://www.facebook.com/share/16xQ68hrFn/" style="margin-left: 10px;"> <i class="fa-brands fa-facebook"></i>FaceBook </a>  
+   <a href="#" style="margin-left: 10px;"> <i class="fa-brands fa-linkedin"></i> LinkIn </h4></a>
+</ul>
+</div>
+
+</section>
+ <footer class=" text-white pt-5 pb-3 mt-5 footer" style="background-color: none;">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Left Column -->
+      <div class="col-md-4">
+        <h4 class="fw-bold">Sheraz Ali Web Developer</h4>
+        <p class="mb-1 fw-semibold">Crafting Digital Experiences with <span class="text-info">Code & Creativity</span></p>
+        <p style="font-size: 0.9rem;">Passionate about building innovative and user-friendly web solutions, from fitness apps to blockchain platforms. Let's collaborate to bring your ideas to life.</p>
+
+        <p class="fw-semibold mb-1">Connect with me:</p>
+        <div class="d-flex gap-3 align-items-center">
+          <a href="https://github.com/raisheraz7181-coder" class="btn2"><i class="fab fa-github"></i></a>
+          <a href="#" class="btn2"><i class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/RaiSherazali?t=KnFBzZTuwnktYZD1hix4sg&s=09" class="btn2"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/923131006067" class="btn1 "><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://wa.me/923131006067" class="btn btn-success btn-sm px-3 py-2 fw-semibold rounded-pill">
+            <i class="fab fa-whatsapp me-1"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled mt-3">
+          <li><a href="#main1" class=" me"><i class="fas  fa-angle-right me-2" style="color: #00c3ff;"></i>Home</a></li>
+          <li><a href="#about" class="me"><i class="fas fa-angle-right me-2" style="color: #00c3ff;"></i>About Me</a></li>
+          <li><a href="#Services" class="me"><i class="fas fa-angle-right me-2" style="color:  #00c3ff;"></i>Services</a></li>
+          <li><a href="#contact" class="me"><i class="fas fa-angle-right me-2" style="color:  #00c3ff;"></i>Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4">
+        <h6 class="fw-bold">Get In Touch</h6>
+        <ul class="list-unstyled mt-3">
+          <li><a class="me" href="" style="text-decoration: none;"><i class="fas fa-map-marker-alt me-2 " style="color: #00c3ff;"> </i>  Planet Earth (Remote Ready) </a></li>
+          <li><a class="me" href="mailto:raisheraz7181@gmail.com" style="text-decoration: none;"><i class="fas fa-envelope me-2 " style="color:  #00c3ff;"></i> raisheraz7181@gmail.com</a></li>
+          <li><a class="me" href="https://wa.me/923131006067" style="text-decoration: none;"><i class="fab fa-whatsapp me-2 " style="color:  #00c3ff;"></i> +92 313 1006067</a></li>
+        </ul>
+        <div class="mt-2">
+          <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+          <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4" style="border-color: #333;" />
+
+    <p class="text-center text-muted mb-0" style="font-size: 0.85rem;">
+      Copyright © 2025 <strong>Sheraz ALi</strong>. All Rights Reserved
+    </p>
+  </div>
+</footer>
+    </div>
+   
+    </section>
+</body>
+</html>
