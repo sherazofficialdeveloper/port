@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/boostrap.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="./chatgpt_files/bootstrap.min.css" rel="stylesheet">
+  <title>Navbar with Logo Image</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(90deg, #004aad, #1e90ff);
+      padding: 12px 30px;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 74, 173, 0.5);
+      flex-wrap: wrap;
+      border-radius: 0 0 15px 15px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .logo img {
+      height: 36px;
+      width: 36px;
+      margin-right: 10px;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    }
+    .logo span {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      user-select: none;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    .search-box input {
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: none;
+      width: 220px;
+      font-size: 16px;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+    .search-box input::placeholder {
+      color: #a0c4ff;
+    }
+    .search-box input:focus {
+      box-shadow: 0 0 8px 2px rgba(30, 144, 255, 0.7);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 25px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 74, 173, 0.3);
+      user-select: none;
+    }
+
+    .nav-links a:hover {
+      background-color: #ffeb3b;
+      color: #004aad;
+      box-shadow: 0 4px 12px rgba(255, 235, 59, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+        border-radius: 0 0 10px 10px;
+      }
+      .search-box {
+        margin: 15px 0;
+        width: 100%;
+      }
+      .search-box input {
+        width: 100%;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Overlay for better text readability */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      animation: fadeInUp 1.5s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    /* Fade-in and slide-up animation */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Button hover animation */
+    .btn-hero {
+      transition: transform 0.3s ease;
+    }
+    .btn-hero:hover {
+      transform: scale(1.05);
+    }
+      @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      opacity: 0;
+      animation-name: fadeInUp;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+
+    /* Stylish button */
+    .btn-custom {
+      background-color: #ffffff;
+      color: #2575fc;
+      padding: 12px 30px;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #f0f0f0;
+      color: #6a11cb;
+      box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
+      transform: scale(1.05);
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      opacity: 0;
+      animation-name: fadeInUp;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+
+    .service-card {
+      background: linear-gradient(145deg, #ffffff, #ffffff);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(37, 117, 252, 0.4);
+    }
+    .animate-fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUpHeavy {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      opacity: 0;
+      animation: fadeInUpHeavy 1s ease forwards;
+    }
+
+    /* Neon glow on hover */
+    .card:hover {
+      box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+      transform: translateY(-5px);
+      transition: 0.3s ease-in-out;
+    }
+
+
+
+
+     .animate-zoom-in {
+      opacity: 0;
+      transform: scale(0.9);
+      animation: zoomInFade 0.8s forwards ease;
+    }
+
+    @keyframes zoomInFade {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+
+
+
+
+     .animate-fade-in {
+      opacity: 0;
+      animation: fadeInFooter 1.2s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    @keyframes fadeInFooter {
+      to {
+        opacity: 1;
+      }
+    }
+
+    a.text-light:hover {
+      color: #0d6efd;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <!-- Example favicon icon for logo -->
+      <img src="./chatgpt_files/Commons-logo.svg.png" alt="Logo">
+      <span>MyLogo</span>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+    </div>
+
+    <div class="nav-links">
+      <a href="http://127.0.0.1:5500/boostrap.html#">Home</a>
+      <a href="http://127.0.0.1:5500/boostrap.html#">About</a>
+      <a href="http://127.0.0.1:5500/boostrap.html#">Services</a>
+      <a href="http://127.0.0.1:5500/boostrap.html#">Contact Us</a>
+    </div>
+  </nav>
+<section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="display-4 fw-bold mb-3">Welcome to Our Website</h1>
+        <p class="lead mb-4">
+          Discover amazing products and services that will help you achieve your goals.
+        </p>
+        <a href="http://127.0.0.1:5500/boostrap.html#" class="btn btn-primary btn-lg btn-hero">Get Started</a>
+      </div>
+    </div>
+  </section>
+<script src="./chatgpt_files/bootstrap.bundle.min.js.download"></script>
+ <section class="about py-5" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); color: white;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Image part -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="./chatgpt_files/photo-1498050108023-c5249f4df085" alt="Web Development" class="img-fluid rounded shadow animate-fade-in" style="animation-delay: 0.3s;">
+      </div>
+      <!-- Text part -->
+      <div class="col-md-6 animate-fade-in" style="animation-delay: 0.6s;">
+        <h2 class="mb-3">About Us</h2>
+        <p class="lead">
+          We specialize in cutting-edge web development services, creating responsive, user-friendly, and high-performance websites tailored to your business needs.
+        </p>
+        <p>
+          Our team combines creativity and technical expertise to deliver custom solutions using the latest technologies such as HTML5, CSS3, JavaScript, React, and more. Since 2020, we have helped numerous clients establish a strong online presence and grow their businesses through innovative web solutions.
+        </p>
+        <a href="http://127.0.0.1:5500/boostrap.html#" class="btn btn-custom mt-3">Learn More</a>
+      </div>
+    </div>
+  </div>
+ </section>
+ <section class="services py-5" style="background: rgb(54, 56, 179);">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: #eeeff1; font-weight: 700;">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-card p-4 text-center rounded shadow animate-fade-in" style="animation-delay: 0.2s; background: #590fb9;">
+          <div class="icon mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#2575fc" class="bi bi-code-slash" viewBox="0 0 16 16">
+              <path d="M10.478 1.647a.5.5 0 0 1 .044.705L6.875 8l3.647 5.647a.5.5 0 0 1-.73.68l-4-6.176a.5.5 0 0 1 0-.682l4-6.176a.5.5 0 0 1 .686-.088z"></path>
+              <path d="M3.646 1.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1-.708.708L4 2.707 1.354 5.354a.5.5 0 1 1-.708-.708l3-3z"></path>
+            </svg>
+          </div>
+          <h5 class="mb-3" style="color: #1a3d8f; font-weight: 600;">Web Development</h5>
+          <p class="text-muted">Responsive, fast, and SEO-friendly websites tailored for your business goals.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card p-4 text-center rounded shadow animate-fade-in" style="animation-delay: 0.4s; background: #590fb9;">
+          <div class="icon mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#2575fc" class="bi bi-phone" viewBox="0 0 16 16">
+              <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"></path>
+            </svg>
+          </div>
+          <h5 class="mb-3" style="color: #1a3d8f; font-weight: 600;">Mobile App Development</h5>
+          <p class="text-muted">Intuitive and powerful apps for both iOS and Android platforms.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card p-4 text-center rounded shadow animate-fade-in" style="animation-delay: 0.6s; background: #590fb9;">
+          <div class="icon mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#2575fc" class="bi bi-gear" viewBox="0 0 16 16">
+              <path d="M8 1a7 7 0 0 1 6.23 3.49l1.42-1.42a.5.5 0 1 1 .707.707l-1.42 1.42A7 7 0 1 1 8 1zm0 1a6 6 0 0 0-5.657 4.17l-.625-.627a.5.5 0 1 1 .708-.708l.625.627A6 6 0 1 0 8 2z"></path>
+              <path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"></path>
+            </svg>
+          </div>
+          <h5 class="mb-3" style="color: #1a3d8f; font-weight: 600;">SEO Optimization</h5>
+          <p class="text-muted">Boost your website’s visibility and ranking on search engines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="skills py-5" style="background: linear-gradient(to right, #2575fc 50%, #3d5ce6 50%); color: rgb(17, 82, 204);">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left side: Text -->
+      <div class="col-md-6 animate-fade-in" style="animation-delay: 0.3s;">
+        <h2 class="mb-4" style="font-weight: 700; color: #f0f0f0;">Our Skills</h2>
+        <p style="color: #eeeff1;">We pride ourselves on mastering the latest technologies to build outstanding digital experiences.</p>
+      </div>
+      <!-- Right side: Skill bars -->
+      <div class="col-md-6">
+        <div class="mb-4 animate-fade-in" style="animation-delay: 0.5s; color: #fdfdfd;">
+          <h5>HTML5</h5>
+          <div class="progress" style="height: 20px; background: rgba(255,255,255,0.3); border-radius: 10px;">
+            <div class="progress-bar bg-white" role="progressbar" style="width: 90%; color: #2575fc; font-weight: 700;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+        </div>
+        <div class="mb-4 animate-fade-in" style="animation-delay: 0.7s; color: #fdfdfd;">
+          <h5>CSS3</h5>
+          <div class="progress" style="height: 20px; background: rgba(255,255,255,0.3); border-radius: 10px;">
+            <div class="progress-bar bg-white" role="progressbar" style="width: 85%; color: #2575fc; font-weight: 700;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+        <div class="mb-4 animate-fade-in" style="animation-delay: 0.9s; color: #fdfdfd;">
+          <h5>JavaScript</h5>
+          <div class="progress" style="height: 20px; background: rgba(255,255,255,0.3); border-radius: 10px;">
+            <div class="progress-bar bg-white" role="progressbar" style="width: 80%; color: #2575fc; font-weight: 700;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+        <div class="mb-4 animate-fade-in" style="animation-delay: 1.1s; color: #fdfdfd;">
+          <h5>React</h5>
+          <div class="progress" style="height: 20px; background: rgba(255,255,255,0.3); border-radius: 10px;">
+            <div class="progress-bar bg-white" role="progressbar" style="width: 75%; color: #2575fc; font-weight: 700;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section class="heavy-section py-5" style="background: linear-gradient(135deg, #5f215a, #150028); color: #ffffff;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-weight: 700; color: #ffffff;">Powerful Features</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow-lg animate-fade-in" style="background-color: #f843bc; border: none; animation-delay: 0.2s;">
+          <div class="mb-3">
+            <i class="bi bi-speedometer2 fs-1 text-info"></i>
+          </div>
+          <h5 class="text-white">Performance</h5>
+          <p class="text-info">Lightning-fast performance optimized for all devices and platforms.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow-lg animate-fade-in" style="background-color: #d12790; border: none; animation-delay: 0.4s;">
+          <div class="mb-3">
+            <i class="bi bi-lock-fill fs-1 text-warning"></i>
+          </div>
+          <h5 class="text-white">Security</h5>
+          <p class="text-info">Top-notch security features to protect your data and infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4 shadow-lg animate-fade-in" style="background-color: #e42a87; border: none; animation-delay: 0.6s;">
+          <div class="mb-3">
+            <i class="bi bi-lightning-fill fs-1 text-danger"></i>
+          </div>
+          <h5 class="text-white">Innovation</h5>
+          <p class="text-info">Built using cutting-edge technologies and forward-thinking design.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio py-5" style="background: #121212; color: #fff;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="font-weight: 700;">My Portfolio</h2>
+    <div class="row g-4">
+      <!-- Portfolio item -->
+      <div class="col-md-4 animate-zoom-in" style="animation-delay: 0.2s;">
+        <div class="card bg-dark text-white shadow-lg border-0">
+          <img src="./chatgpt_files/photo-1506765515384-028b60a970df" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project One</h5>
+            <p class="card-text">A modern responsive website built with React and Bootstrap.</p>
+            <a href="http://127.0.0.1:5500/boostrap.html#" class="btn btn-outline-info btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio item -->
+      <div class="col-md-4 animate-zoom-in" style="animation-delay: 0.4s;">
+        <div class="card bg-dark text-white shadow-lg border-0">
+          <img src="./chatgpt_files/photo-1515377905703-c4788e51af15" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project Two</h5>
+            <p class="card-text">Mobile app design with intuitive UI and UX concepts.</p>
+            <a href="http://127.0.0.1:5500/boostrap.html#" class="btn btn-outline-info btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio item -->
+      <div class="col-md-4 animate-zoom-in" style="animation-delay: 0.6s;">
+        <div class="card bg-dark text-white shadow-lg border-0">
+          <img src="./chatgpt_files/photo-1498050108023-c5249f4df085(1)" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project Three</h5>
+            <p class="card-text">SEO optimization project with measurable growth.</p>
+            <a href="http://127.0.0.1:5500/boostrap.html#" class="btn btn-outline-info btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer bg-dark text-light py-5 animate-fade-in">
+  <div class="container">
+    <div class="row">
+      <!-- About -->
+      <div class="col-md-4 mb-4">
+        <h5>About Us</h5>
+        <p>
+          We are dedicated to providing the best web solutions with modern design and great performance.
+        </p>
+      </div>
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="http://127.0.0.1:5500/boostrap.html#" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="http://127.0.0.1:5500/boostrap.html#" class="text-light text-decoration-none">Services</a></li>
+          <li><a href="http://127.0.0.1:5500/boostrap.html#" class="text-light text-decoration-none">About</a></li>
+          <li><a href="http://127.0.0.1:5500/boostrap.html#" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div class="col-md-4 mb-4">
+        <h5>Contact</h5>
+        <p>Email: info@example.com</p>
+        <p>Phone: +123 456 7890</p>
+        <div>
+          <a href="http://127.0.0.1:5500/boostrap.html#" class="text-light me-3 fs-4"><i class="bi bi-facebook"></i></a>
+          <a href="http://127.0.0.1:5500/boostrap.html#" class="text-light me-3 fs-4"><i class="bi bi-twitter"></i></a>
+          <a href="http://127.0.0.1:5500/boostrap.html#" class="text-light me-3 fs-4"><i class="bi bi-instagram"></i></a>
+          <a href="http://127.0.0.1:5500/boostrap.html#" class="text-light fs-4"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="border-light">
+    <p class="text-center mb-0">© 2025 YourCompany. All rights reserved.</p>
+  </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</footer></body></html>
