@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://127.0.0.1:5500/bop.html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BISP Awareness &amp; Complaint Portal</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="./BISP Awareness &amp; Complaint Portal_files/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link href="./BISP Awareness &amp; Complaint Portal_files/animate.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #003366; /* dark blue */
+      --secondary-color: #f9a825; /* amber */
+      --bg-color: #f0f4f8;
+      --btn-hover: #d18f00;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      scroll-behavior: smooth;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: var(--primary-color);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: var(--secondary-color);
+      letter-spacing: 2px;
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: var(--secondary-color) !important;
+    }
+    /* Hero */
+    #hero {
+      background: url('https://cdn.pixabay.com/photo/2017/05/01/19/09/money-2279794_1280.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    #hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 51, 102, 0.75);
+      z-index: 0;
+    }
+    #hero .content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    #hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      letter-spacing: 3px;
+    }
+    #hero p {
+      font-size: 1.4rem;
+      margin: 20px 0 35px;
+      text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.6);
+    }
+    #hero .btn-primary {
+      background-color: var(--secondary-color);
+      border: none;
+      font-weight: 700;
+      padding: 14px 40px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 5px 15px rgba(249,168,37,0.5);
+    }
+    #hero .btn-primary:hover {
+      background-color: var(--btn-hover);
+      box-shadow: 0 8px 25px rgba(209,143,0,0.8);
+    }
+    /* Sections */
+    section {
+      padding: 70px 0;
+    }
+    section h2 {
+      text-align: center;
+      font-weight: 900;
+      font-size: 2.8rem;
+      color: var(--primary-color);
+      margin-bottom: 50px;
+      position: relative;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 5px;
+      background-color: var(--secondary-color);
+      margin: 15px auto 0;
+      border-radius: 3px;
+    }
+    /* About Section */
+    #about .row {
+      align-items: center;
+    }
+    #about img {
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 51, 102, 0.2);
+    }
+    #about p {
+      font-size: 1.2rem;
+      line-height: 1.75;
+      color: #2c3e50;
+    }
+    /* Tips Section */
+    #tips ul {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      list-style-type: none;
+      padding-left: 0;
+      color: var(--primary-color);
+    }
+    #tips ul li {
+      background: #fff8dc;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-left: 6px solid var(--secondary-color);
+      border-radius: 6px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: background-color 0.3s ease;
+    }
+    #tips ul li:hover {
+      background-color: #fff3b0;
+    }
+    /* Complaint Form */
+    #complaint form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 51, 102, 0.15);
+    }
+    #complaint label {
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    #complaint input,
+    #complaint textarea {
+      border-radius: 12px;
+      border: 2px solid var(--primary-color);
+      padding: 12px 15px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    #complaint input:focus,
+    #complaint textarea:focus {
+      border-color: var(--secondary-color);
+      outline: none;
+    }
+    #complaint button {
+      background-color: var(--secondary-color);
+      border: none;
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 12px 45px;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    #complaint button:hover {
+      background-color: var(--btn-hover);
+    }
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      #hero h1 {
+        font-size: 2.5rem;
+      }
+      section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="http://127.0.0.1:5500/bop.html#">BISP Awareness</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(100%)"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="http://127.0.0.1:5500/bop.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/bop.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/bop.html#complaint">Report</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/bop.html#tips">Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/bop.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="animate__animated animate__fadeIn">
+    <div class="content">
+      <h1 class="animate__animated animate__fadeInDown">Stop Fraudulent BOP Agents!</h1>
+      <p class="animate__animated animate__fadeInUp">Protect yourself and your family from unauthorized agents misusing BISP funds.</p>
+      <a href="http://127.0.0.1:5500/bop.html#complaint" class="btn btn-primary animate__animated animate__pulse animate__infinite">Report Now</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About BISP &amp; Unauthorized Agents</h2>
+      <div class="row gy-4">
+        <div class="col-md-6">
+          <img src="./BISP Awareness &amp; Complaint Portal_files/handshake-3196481_1280.jpg" alt="Handshake" class="img-fluid shadow rounded">
+        </div>
+        <div class="col-md-6">
+          <p>
+            Banazir Income Support Program (BISP) is a government initiative aimed at providing financial assistance to deserving families.
+            Unfortunately, some unauthorized agents pretend to help beneficiaries but instead misuse or steal the funds.
+          </p>
+          <p>
+            It is important to be aware and cautious. Always verify agents through official channels and never share sensitive information.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complaint Form -->
+  <section id="complaint">
+    <div class="container">
+      <h2>Report Unauthorized Agent</h2>
+      <form id="complaintForm" novalidate="">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Full Name *</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your full name" required="">
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Contact Number *</label>
+          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required="" pattern="[0-9]{10,15}">
+          <div class="invalid-feedback">Please enter a valid phone number.</div>
+        </div>
+        <div class="mb-3">
+          <label for="agentDetails" class="form-label">Agent Details *</label>
+          <textarea class="form-control" id="agentDetails" rows="4" placeholder="Describe the agent, location, incident, etc." required=""></textarea>
+          <div class="invalid-feedback">Please provide details about the agent.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Report</button>
+        <div id="formAlert" class="mt-3"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Tips -->
+  <section id="tips" class="bg-light">
+    <div class="container">
+      <h2>Safety Tips</h2>
+      <ul>
+        <li>Always verify agents through official BISP channels.</li>
+        <li>Never share your CNIC or bank details with unauthorized people.</li>
+        <li>Use official BISP helpline numbers for inquiries.</li>
+        <li>Report any suspicious agent immediately through this portal.</li>
+        <li>Keep your personal documents safe and confidential.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact (dummy) -->
+  <section id="contact">
+    <div class="container text-center">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need help, call the official BISP helpline:</p>
+      <h4>0800-22577</h4>
+      <p>Email: info@bisp.gov.pk</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 BISP Awareness &amp; Complaint Portal. All rights reserved.
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="./BISP Awareness &amp; Complaint Portal_files/bootstrap.bundle.min.js.download"></script>
+
+  <script>
+    // Form validation and submission simulation
+    const form = document.getElementById("complaintForm");
+    const alertDiv = document.getElementById("formAlert");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alertDiv.innerHTML = "";
+      if (!form.checkValidity()) {
+        form.classList.add("was-validated");
+        return;
+      }
+      // Simulate form submission success
+      alertDiv.innerHTML = '<div class="alert alert-success">Thank you for your report. We will investigate the matter.</div>';
+      form.reset();
+      form.classList.remove("was-validated");
+    });
+  </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

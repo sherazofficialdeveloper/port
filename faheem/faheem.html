@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Document</title>
+</head>
+<style>
+  .main {
+    height: auto;
+    background-color: tan; /* 🔹 واپس add کر دیا */
+  }
+  .navv {
+    background-color: teal;
+  }
+  .input1,.input2,.input3,.input4 {
+    background-color: #61084b;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+  }
+  .input1{height: 60px;width: 48%;}
+  .input2{height: 60px;width: 50%;margin-left: 10px;}
+  .input3{height: 60px;width: 100%;margin-top: 20px;}
+  .input4{height: 200px;width: 100%;margin-top: 20px;}
+  .sendmassege{
+    background-color: #7e1062;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 40px;
+    margin-top:20px;
+  }
+  .sendmassege:hover{
+    background:linear-gradient(to right,rgb(116, 5, 82)50%,rgb(209, 200, 200)200%);
+    transform: scale(1.1);
+  }
+  .footer {
+    background-color: teal;
+  }
+  .footer h5 {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  .footer a:hover {
+    color: gold !important;
+  }
+</style>
+<body>
+  <div class="main container-fluid">
+    <nav class="navbar navbar-expand-lg navv">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a class="nav-link ms-5 text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item ms-5">
+              <a class="nav-link text-white" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle ms-5 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">whatsapp</a></li>
+                <li><a class="dropdown-item" href="#">gmail</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="search" aria-label="search">
+            <button class="btn btn-outline-danger" type="submit">search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 🔹 Daily Message + Video Section -->
+    <section class="p-4">
+      <h2 class="text-center mb-3">📢 Today's Update</h2>
+      <div class="card shadow p-3 mb-4">
+        <h5 id="daily-text">Loading message...</h5>
+      </div>
+      <div class="card shadow p-3">
+        <h5>📺 Today's Video</h5>
+        <div class="ratio ratio-16x9">
+          <iframe id="daily-video" src="" title="Daily Video" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- 🔹 End Section -->
+
+    <!-- 🔹 Admin Panel -->
+    <section class="p-4 bg-light shadow">
+      <h2 class="text-center mb-3">🛠 Admin Panel</h2>
+      <form id="admin-form">
+        <div class="mb-3">
+          <label class="form-label">Enter Daily Message:</label>
+          <textarea id="admin-message" class="form-control" rows="3" placeholder="Write today's update"></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Enter YouTube Video Link:</label>
+          <input type="text" id="admin-video" class="form-control" placeholder="https://www.youtube.com/watch?v=...">
+        </div>
+        <button type="submit" class="btn btn-success">Save Update</button>
+      </form>
+    </section>
+    <!-- 🔹 End Admin Panel -->
+
+    <section>
+      <div class="row">
+        <div class="location col-sm-12 col-lg-6">
+          <h1>Location</h1>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d427.6757949323575!2d73.32623337286469!3d30.959140312749074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922990037d7c00f%3A0xc475516a04b9cf45!2sMashallah%20Mobile%20Center!5e0!3m2!1sen!2s!4v1755578142157!5m2!1sen!2s" width="600" height="450" style="border:0; max-width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   </div>
+        <div class="image col-sm-12 col-lg-6">
+          <h1>Image</h1>
+          <img src="unnamed (1).jpg" alt="" style=" width: 600px; height: 450px; border-radius: 50px; max-width: 100%;" >
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔹 About Shop (واپس add کر دیا) -->
+    <section style="position: relative;">
+        <h1>About our Shop:</h1>
+        <div class="container-fluid row">
+            <div class="col-sm-12 col-lg-6">
+     <p>Mashallah Mobile Shop is a trusted and reliable store in the area that provides people with modern facilities and daily necessities all in one place. Not only are mobile phones, smartphone accessories, and other electronic items available here, but this shop also serves as a complete hub for financial and online services. At this store, customers can conveniently send and receive money through EasyPaisa, JazzCash, Upaisa, Omni, Nayapay, SadaPay, and all other modern online payment methods. Along with this, every type of bill such as electricity, gas, water, internet, and telephone bills — even cable and other utility bills — can be easily paid here. For mobile users, services such as package activation for all networks, balance and card loading, and recharge facilities from different companies are always available. In addition, Mashallah Mobile Shop also acts as a service center for government aid and the Benazir Income Support Program, where eligible individuals can securely and reliably withdraw their assistance using their national identity card. People from villages and nearby areas, who face difficulties in accessing banks or large financial institutions, can easily collect their payments through this shop. With its transparent, honest, and service-oriented approach, Mashallah Mobile Shop has earned a unique place in the hearts of the community. This shop is not just a point of sale but a complete service center where every type of online and financial facility is provided under one roof.</p>
+      </div>
+      <div class="col-sm-12 col-lg-6">
+         <h1>:ہماری دکان کے بارے میں</h1>
+     <p>ماشاءاللہ موبائل شاپ علاقے کی ایک معتبر اور قابلِ اعتماد دکان ہے جو لوگوں کو جدید سہولتیں اور روزمرہ ضروریات ایک ہی جگہ پر فراہم کرتی ہے۔ یہاں نہ صرف موبائل فونز، اسمارٹ فون کے لوازمات اور دیگر برقی اشیاء دستیاب ہیں بلکہ یہ دکان مالی اور آن لائن خدمات کا بھی ایک مکمل مرکز ہے۔ اس دکان پر گاہک با آسانی رقوم بھیج اور وصول کرسکتے ہیں، جن میں ایزی پیسہ، جیز کیش، یُوپیسہ، اومنی، نیا پے، صد پے اور دیگر تمام جدید آن لائن ادائیگی کے طریقے شامل ہیں۔ اسی کے ساتھ ساتھ ہر قسم کے بل جیسے بجلی کے بل، گیس کے بل، پانی کے بل، انٹرنیٹ کے بل، ٹیلی فون کے بل، حتیٰ کہ کیبل اور دیگر یوٹیلٹی بل بھی یہاں آسانی سے جمع کروائے جا سکتے ہیں۔ موبائل صارفین کے لیے ہر نیٹ ورک کے پیکج فعال کرنے کی سہولت، بیلنس اور کارڈ لوڈنگ، اور مختلف کمپنیوں کی ریچارج خدمات بھی ہمہ وقت دستیاب ہیں۔ مزید یہ کہ ماشاءاللہ موبائل شاپ حکومت اور بینظیر انکم سپورٹ پروگرام کے مستحق افراد کے لیے بھی ایک خدمت مرکز کے طور پر کام کرتی ہے، جہاں لوگ اپنے شناختی کارڈ کے ذریعے حکومتی امداد محفوظ اور پُراعتماد طریقے سے وصول کرتے ہیں۔ دیہات اور قریبی علاقوں کے لوگ، جنہیں بینک یا بڑے مالیاتی اداروں تک رسائی میں مشکلات کا سامنا ہوتا ہے، اس دکان کے ذریعے آسانی سے اپنی رقوم حاصل کر لیتے ہیں۔ اپنے شفاف، ایماندار اور خدمت گزار رویے کی بدولت ماشاءاللہ موبائل شاپ نے عوام کے دلوں میں ایک منفرد مقام بنایا ہے۔ یہ دکان صرف خرید و فروخت کا مرکز نہیں بلکہ ایک مکمل عوامی خدمت گاہ ہے جہاں ہر طرح کی آن لائن اور مالیاتی سہولت ایک ہی چھت کے نیچے فراہم کی جاتی ہے۔</p>
+    </div>
+    </div>
+    </section>
+    <section>
+      About Me
+      <div class="row container-fluid">
+        <div class="aboutcol-sm-12 col-md-6 col-lg-3"><h1>M.Faheem</h1><h6>03454167681</h6></div>
+        <div class="aboutcol-sm-12 col-md-6 col-lg-3"><h1>Shahzad Ali</h1><h6>03354768463</h6></div>
+        <div class="aboutcol-sm-12 col-md-6 col-lg-3"><h1>Tahir Islam</h1><h6>03453851012</h6></div>
+        <div class="aboutcol-sm-12 col-md-6 col-lg-3"><h1>Kashif Raza Gill</h1><h6>0</h6></div>
+      </div>
+    </section>
+
+    <section>
+      <form action="#" method="POST" class="contact-form"> 
+        <div class="container">
+          <textarea class="input1" placeholder="Your Name" required></textarea>
+          <textarea class="input2" placeholder="Your Email" required></textarea>
+          <textarea class="input3" placeholder=" Subject" required></textarea>
+          <textarea class="input4" placeholder="Your Massage" required></textarea>
+          <button class="sendmassege btn-gradient rounded-pill px-5 py-3"> Send Massege</button><br><br>
+        </div>
+      </form>
+      <div class="contacttext d-flex justify-content-evenly" style="width: 100%; max-width: 100%;">
+        <div class="row">
+          <div class="col-4"> <a href="#" style="font-size: 23px;"> Facebook <i class="fab fa-facebook" style="color: rgb(23, 43, 223);"></i></a></div>
+          <div class="col-4"><a href="#" style="font-size: 23px;"> Whatsapp <i class="fab fa-whatsapp" style="color: rgb(23, 110, 15);"></i></a></div>
+          <div class="col-4"> <a href="#" style="font-size: 23px;"> Gmail <i class="fas fa-envelope" style="color: rgb(37, 86, 129);"></i></a></div>  
+      </div></div>
+    </section>
+  </div>
+
+  <!-- 🔹 Script for Daily Update -->
+  <script>
+    // Load Saved Data
+    let msg = localStorage.getItem("dailyMessage");
+    let video = localStorage.getItem("dailyVideo");
+
+    if (msg) document.getElementById("daily-text").innerText = msg;
+    if (video) {
+      let embed = video.replace("watch?v=", "embed/");
+      document.getElementById("daily-video").src = embed;
+    }
+
+    // Admin Panel Save
+    document.getElementById("admin-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      let newMsg = document.getElementById("admin-message").value;
+      let newVid = document.getElementById("admin-video").value;
+
+      localStorage.setItem("dailyMessage", newMsg);
+      localStorage.setItem("dailyVideo", newVid);
+
+      alert("✅ Daily update saved!");
+      location.reload();
+    });
+  </script>
+  <footer class="footer mt-5 text-white">
+  <div class="container-fluid p-4">
+    <div class="row">
+      <!-- About Shop -->
+      <div class="col-md-4 mb-3">
+        <h5>🛍 About Our Shop</h5>
+        <p>
+          Mashallah Mobile Shop ایک معتبر اور قابلِ اعتماد اسٹور ہے جہاں جدید موبائل فونز، 
+          اسمارٹ فون لوازمات اور دیگر الیکٹرانک اشیاء دستیاب ہیں۔ 
+          یہاں آپ کو EasyPaisa, JazzCash, Upaisa, Omni, Nayapay کی سہولت بھی ملے گی۔
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5>🔗 Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+          <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+          <li><a href="#privacy" class="text-white text-decoration-none">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-3">
+        <h5>📞 Contact Us</h5>
+        <p><i class="fas fa-map-marker-alt"></i> Jandraka Road, Bangla Gogera, near Government High School, Sadar Gogera, Okara, Pakistan</p>
+        <p><i class="fas fa-phone"></i> +92 345 4167681</p>
+        <p><i class="fas fa-envelope"></i> mashallahshop@gmail.com</p>
+
+        <!-- Social Icons -->
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white fs-4"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-2 bg-dark">
+    © 2025 Mashallah Mobile Shop | All Rights Reserved
+  </div>
+</footer>
+
+</body>
+</html>

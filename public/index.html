@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Shop Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Special Offer Banner -->
+  <div class="bg-warning text-dark text-center p-2" data-aos="fade-down">
+    🎉 Special Offer: School Bags 20% OFF till Friday!
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-aos="fade-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images.png" alt="Logo" width="120" height="60">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+          <li class="nav-item me-4"><a class="nav-link" href="#shop">Shop</a></li>
+          <li class="nav-item me-4"><a class="nav-link" href="#apply">Apply</a></li>
+          <li class="nav-item me-4"><a class="nav-link" href="#deals">Daily Deals</a></li>
+          <li class="nav-item me-4"><a class="nav-link" href="#owner">Owner</a></li>
+          <li class="nav-item me-4"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item me-4"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item me-4"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item me-4"><a class="nav-link" href="#location">Location</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center bg-success text-white p-3" data-aos="fade-up">
+    <h1>حافظ اسکول مارٹ — اسکول اور کھیل کے ضروری سامان کی مکمل دکان</h1>
+  </header>
+  <div class="hero" id="hero" data-aos="zoom-in"></div>
+
+  <!-- Search Bar -->
+  <div class="text-center my-4" data-aos="fade-up">
+    <input type="text" id="searchBar" placeholder="Search Products..." class="form-control w-50 mx-auto">
+  </div>
+
+  <!-- Products -->
+  <section id="shop" class="container" data-aos="fade-up">
+    <h2 class="text-center mb-4">Our Products</h2>
+    <div class="products">
+      <div class="product" data-aos="flip-left">
+        <h3>Sports & Fitness Gear</h3>
+        <p>High-quality, durable Cricket Bats</p>
+        <p>Price: Rs. 2,000</p>
+        <button class="addto" onclick="sendWhatsAppOrder('Cricket Bat - Wooden', '2000')">Buy Now</button>
+      </div>
+      <div class="product" data-aos="flip-right">
+        <h3>School Supplies</h3>
+        <p>School Bags, Stationery, and More</p>
+        <p>Price: Rs. 1,500</p>
+        <button class="addto" onclick="sendWhatsAppOrder('School Bag - Premium', '1500')">Buy Now</button>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <button class="addto" onclick="sendProductList()">Full Product List</button>
+    </div>
+  </section>
+
+  <!-- Apply -->
+  <section id="apply" class="container mt-5" data-aos="fade-up">
+    <h2>Apply for Deals</h2>
+    <a href="https://wa.me/923453330239" target="_blank" class="text-white">Click Here to Apply via WhatsApp</a>
+  </section>
+
+  <!-- Daily Deals -->
+  <section id="deals" class="container mt-5" data-aos="fade-up">
+    <h2>Daily Deals</h2>
+    <div class="shop-pic">
+      <img src="unnamed.jpg" alt="Deal of the Day">
+    </div>
+  </section>
+
+  <!-- Owner -->
+  <section id="owner" class="container mt-5 text-center" data-aos="fade-up">
+    <h2>About the Owner</h2>
+    <img src="hafid.jpg" alt="" width="300" height="300" style="max-width: 100%; border-radius:20px;">
+    <p>Owner Name: <b>Hafiz Muhammad Usman</b></p>
+    <p>Contact: 0345-3330239</p>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="container mt-5" data-aos="fade-up">
+    <h2>Customer Reviews</h2>
+    <div class="bg-dark text-white p-3 rounded">
+      <p>⭐⭐⭐⭐⭐ "Excellent quality products!" – Ali Raza</p>
+      <p>⭐⭐⭐⭐ "Affordable prices and fast delivery!" – Ayesha Khan</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="container mt-5" data-aos="fade-up">
+    <h2>FAQ – Frequently Asked Questions</h2>
+    <details>
+      <summary style="color: yellow;">Delivery Kitni Der Mein Hoti Hai?</summary>
+      <p>Delivery usually 2–3 din mein hoti hai.</p>
+    </details>
+    <details>
+      <summary style="color: yellow;">Payment Methods Kon Kon Se Hain?</summary>
+      <p>EasyPaisa, JazzCash aur Cash on Delivery.</p>
+    </details>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="container mt-5" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form id="contactForm" class="bg-dark p-3 rounded text-white" >
+      <div class="mb-3">
+        <label>Name:</label>
+        <input type="text" name="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label>Email:</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label>Message:</label>
+        <textarea class="form-control" name="message" rows="3" required></textarea>
+      </div>
+      <button class="btn btn-success">Send Message</button>
+    </form>
+  </section>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch('/api/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await res.json();
+      if (result.success) {
+        alert('Message sent successfully!');
+        this.reset();
+      } else {
+        alert('Failed to send: ' + (result.error || 'Unknown error'));
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Failed to send.');
+    }
+  });
+</script>
+  <!-- Location -->
+  <section id="location" class="container mt-5" data-aos="fade-up">
+    <h2>Our Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3421.3951331427725!2d73.3266082!3d30.9594537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922990012b233b7%3A0x62134aa69eabb1a9!2sHafiz%20School%20Mart%20and%20Online%20apply%20centre!5e0!3m2!1sen!2s!4v1754453792097!5m2!1sen!2s" loading="lazy"></iframe>
+  </section>
+
+  <!-- Payment -->
+  <section id="payment" class="container mt-5" data-aos="fade-up">
+    <h2>Payment Methods</h2>
+    <p>EasyPaisa, JazzCash & Cash on Delivery</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center p-3 mt-5" data-aos="fade-up">
+    <p>&copy; 2025 Hafiz School Mart. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+   style="position:fixed; bottom:20px; right:20px; background:purple; color:#fff; border:none; padding:10px; border-radius:50%;">
+  ⬆
+  </button>
+
+  <!-- WhatsApp + Search -->
+  <script>
+    function sendWhatsAppOrder(productName, price) {
+      var message = "I want to buy " + productName + " for Rs. " + price;
+      var phoneNumber = "923453330239";
+      var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+      window.open(url, '_blank');
+    }
+
+    function sendProductList() {
+      var message = "Assalam o Alaikum! Hafiz School Mart ki Products List: ...";
+      var phoneNumber = "923453330239";
+      var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+      window.open(url, '_blank');
+    }
+
+    document.getElementById("searchBar").addEventListener("keyup", function() {
+      let searchValue = this.value.toLowerCase();
+      let products = document.querySelectorAll(".product");
+      products.forEach(product => {
+        let text = product.innerText.toLowerCase();
+        product.style.display = text.includes(searchValue) ? "block" : "none";
+      });
+    });
+  </script>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:1200, once:true});</script>
+
+  <!-- Galaxy Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+  <script>
+    VANTA.NET({ el: "#hero", color: 0xffffff, backgroundColor: 0x111111 });
+    VANTA.GLOBE({ el: "#shop", backgroundColor: 0x000000, color: 0xffd700 });
+    VANTA.WAVES({ el: "#deals", color: 0x1111ff, shininess: 50, waveHeight: 20, waveSpeed: 0.8 });
+    VANTA.CLOUDS({ el: "#faq", skyColor: 0x222244, cloudColor: 0x5555ff });
+    VANTA.BIRDS({ el: "#contact", backgroundColor: 0x000022, color1: 0xff0000, color2: 0x00ff00 });
+    VANTA.NET({ el: "#owner", color: 0x00ffff, backgroundColor: 0x000000 });
+    VANTA.GLOBE({ el: "#reviews", backgroundColor: 0x000000, color: 0x00ff99 });
+    VANTA.WAVES({ el: "#location", color: 0xff00ff, waveHeight: 25, waveSpeed: 0.7 });
+    VANTA.CLOUDS({ el: "#payment", skyColor: 0x111133, cloudColor: 0x8800ff });
+  </script>
+</body>
+</html>
